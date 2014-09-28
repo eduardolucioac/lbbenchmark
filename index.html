@@ -1,0 +1,588 @@
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+
+td.divLine {
+	background:white;
+	height:1px;
+}
+
+td.divLineescura{
+	background:#808040;
+	height:1px;
+}
+
+.menu  {
+	font-family:Helvetica, Tahoma, Arial;
+	color:white;
+	font-size:9pt;
+}
+
+.ftemas  {
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:12pt;
+	font-weight:bold;
+	color:white;
+}
+
+.temas  {
+	background:#808040;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:12pt;
+	font-weight:bold;
+	color:white;
+}
+
+.lista {
+	background:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:none;
+	color:black;
+}
+
+.subtemas  {
+	background:#808040;
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:none;
+}
+
+.busca{
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:14pt;
+	font-weight:bold;
+}
+
+.busca_avancada {
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.resultado{
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+.detalhegrupo{
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+.detalhe{
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+.resultadogrupo{
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:normal;
+}
+.titulo{
+	color:#808040;
+	font-family:Helvetica, Tahoma, Arial;
+	font-weight:normal;
+	font-size:14pt;
+}
+
+a {
+	text-decoration:none;
+}
+
+.editionlabel{
+	color:#004000;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:10pt;	
+}
+
+.editionitem
+{
+	border-style:solid;
+	border-width:1;
+	background-color:white;
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:normal;
+	font-size:10pt;	
+}
+
+.editionitem_sb
+{
+	border-width:0;
+	background-color:white;
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:normal;
+	font-size:10pt;	
+}
+
+.orelhasel{
+	background-color:#004000;
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:11pt;	
+}
+
+.orelha{
+	background-color:#FFFFFF;
+	color:#004000;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:11pt;	
+}
+
+.title
+{
+	color:#00923D;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:30pt;	
+}
+
+.erro
+{
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:10pt;	
+}
+
+.textop
+{
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;	
+}
+
+.link
+{
+	color:#ffffff;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:10pt;
+}
+
+.login
+{
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:12pt;
+	font-weight:bold;
+}
+
+.error
+{
+	background:#808040;
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.order
+{
+	background:#808040;
+	color:#FFFFFF;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:11pt;
+	font-weight:bold;
+}
+
+.msg
+{
+	background:#808040;
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.navigation
+{
+	color:#FFFFFF;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:9pt;	
+}
+
+.divBox
+{
+	margin:2px;
+}
+
+.label
+{
+	color:#00923D;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:9pt;
+}
+
+.texto0, .texto1, .texto2, .texto3, .texto4, .texto5, .texto6, .colorsText1, .colorsText2, .colorsText3, .colorsText4, .colorsText5, .gfxDiv3
+{
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:9pt;
+}
+
+.texto1
+{
+	color:#00923D;
+}
+
+.texto2
+{
+	color:#165389;
+}
+
+.texto3
+{
+	font-size:13pt;
+}
+
+.texto4
+{
+	padding-top:5px;
+}
+
+.texto5, .colorsText1, .colorsText2, .colorsText3, .colorsText4, .colorsText5, .texto6
+{
+	font-size:7pt;
+}
+
+.texto6
+{
+	color:#E71B1E;
+	padding-top:7px;
+}
+
+.gfxDiv, .gfxDiv1, .gfxDiv2
+{
+	height:2px;
+}
+
+.gfxDiv1
+{
+	background-color:#165389;
+}
+
+.gfxDiv2
+{
+	background-color:#00923D;
+}
+
+.gfxDiv3
+{
+	color:#FFFFFF;
+	background-color:#361D54;
+}
+
+.textArea
+{
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:8pt;
+}
+
+.divLine
+{
+	overflow-x:hidden;
+	clear:both;
+}
+
+.divColumn, .divColumn2, .divColumn3
+{
+	float:left;
+}
+
+.divColumn2
+{
+	width:130px;
+}
+
+.divColumn3
+{
+	width:50%;
+}
+
+.colorsLegend0
+{
+	height:10px;
+	width:15px;
+}
+
+.colorsLegend1
+{
+	background-color:#165389;
+}
+
+.colorsText1{
+	color:#165389;
+}
+
+.colorsLegend2
+{
+	background-color:#00923D;
+}
+
+.colorsText2
+{
+	color:#00923D;	
+}
+
+.colorsLegend3
+{
+	background-color:#F8C300;
+}
+
+.colorsText3
+{
+	color:#F8C300;	
+}
+
+.colorsLegend4
+{
+	background-color:#E71B1E;
+}
+
+.colorsText4
+{
+	color:#E71B1E;
+}
+
+.colorsLegend5
+{
+	background-color:#361D54;
+}
+
+.colorsText5
+{
+	color:#361D54;
+}
+
+</style>
+<title>LB_BENCHMARK V 1.1.2 Beta</title>
+<script type="text/javascript" src="./JS/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="./JS/General.js"></script>
+<script type="text/javascript" src="./JS/moment.min.js"></script>
+</head>
+<body>
+<div class="divLine">
+	<div class="divLine divColumn"><img src="./Images/LogoLightBRWeb.png" alt="BR Light LTDA"></div>
+</div>
+<div class="divLine">
+	<div class="title divColumn" style="margin-left:15px;">LB_BENCHMARK</div>
+	<div class="divColumn texto1 texto4" style="margin-left:15px;">V 1.1.2 Beta</div>
+</div>
+<div class="divLine">
+	<div class="divColumn texto1 texto4" style="margin-left:15px;">©[mirrored] Copyright 2013 Eduardo Lúcio</div>
+</div>
+<div class="divLine">
+	<div class="divColumn texto1 texto4" style="margin-left:15px;">This program is distributed under the terms of the GNU/GPL General Public License</div>
+</div> 
+<div class="divLine">
+	<div class="divBox divColumn"><button id="buttonStartBenchmarking" type="button" onclick="Start_Benchmarking();">[START_BENCHMARKING!]</button></div>
+	<div class="divBox divColumn"><button id="buttonStopBenchmarking" type="button" onclick="Stop_Benchmarking();">[STOP_BENCHMARKING!]</button></div>
+</div>
+<div class="divBox divLine texto1 texto2">
+	(ms = milliseconds)
+</div>
+<div class="divBox divLine texto1 texto2 texto3">
+	Test Parameters
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">Server:</div><div class="divBox divColumn"><input id="fieldServer" class=editionitem type="Text" size="20" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4">Server:</div><div class="divBox divColumn"><input id="fieldServer" class=editionitem type="Text" size="20" value="localhost"/></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">UDB:</div><div class="divBox divColumn"><input id="fieldUDB" class=editionitem type="Text" size="20" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4">UDB:</div><div class="divBox divColumn"><input id="fieldUDB" class=editionitem type="Text" size="20" value="defudb"/></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">Base:</div><div class="divBox divColumn"><input id="fieldBase" class=editionitem type="Text" size="20" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4">Base:</div><div class="divBox divColumn"><input id="fieldBase" class=editionitem type="Text" size="20" value="docs_recebidos"/></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">User:</div><div class="divBox divColumn"><input id="fieldUser" class=editionitem type="Text" size="20" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4">User:</div><div class="divBox divColumn"><input id="fieldUser" class=editionitem type="Text" size="20" value="lbw"/></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">Password:</div><div class="divBox divColumn"><input id="fieldPassword" class=editionitem type="password" size="20" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4">Password:</div><div class="divBox divColumn"><input id="fieldPassword" class=editionitem type="password" size="20" value="lbw"/></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">Cycle Time: *</div><div class="divBox divColumn"><input id="fieldCycleTime" class=editionitem type="Text" size="10" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4">Cycle Time:</div><div class="divBox divColumn"><div class="divBox texto1 texto2" style="display:inline;">[a][b]</div><input id="fieldCycleTime" class=editionitem type="Text" size="10" value="3000"/></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">Cycle Time: *</div><div class="divBox divColumn"><input id="fieldCycleTime" class=editionitem type="Text" size="10" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4">Graph Analysis Cycle:</div><div class="divBox divColumn"><div class="divBox texto1 texto2" style="display:inline;">[a][c]</div><input id="graphAnalysisCycle" class=editionitem type="Text" size="10" value="10000"/></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">Query Test:</div><div class="divBox divColumn"><input id="fieldQueryTest" class=editionitem type="Text" size="150" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4">Alert Peak:</div><div class="divBox divColumn"><input id="fieldPeaksDurationMinutes" class=editionitem type="Text" size="10" value="2"/><div class="divBox texto1 texto2" style="display:inline;">Peaks Duration (Minutes)</div></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">Query Test:</div><div class="divBox divColumn"><input id="fieldQueryTest" class=editionitem type="Text" size="150" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4"></div><div class="divBox divColumn"><input id="fieldAboveAverageLatencyPercent" class=editionitem type="Text" size="10" value="20"/><div class="divBox texto1 texto2" style="display:inline;">Above Average Latency (Percent)</div></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">Query Test:</div><div class="divBox divColumn"><input id="fieldQueryTest" class=editionitem type="Text" size="150" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4"></div><div class="divBox divColumn"><input id="fieldAlertPeakEnabled" class=editionitem type="checkbox" checked/><div class="divBox texto1 texto2" style="display:inline;">Enabled</div></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">Query Test:</div><div class="divBox divColumn"><input id="fieldQueryTest" class=editionitem type="Text" size="150" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4">Alert Error:</div><div class="divBox divColumn"><input id="fieldAlertErrorEnabled" class=editionitem type="checkbox" checked/><div class="divBox texto1 texto2" style="display:inline;">Enabled</div></div>
+</div>
+<div class="divLine">
+	<!--<div class="divBox divColumn2 texto1 texto4">Query Test:</div><div class="divBox divColumn"><input id="fieldQueryTest" class=editionitem type="Text" size="150" value=""/></div>-->
+	<div class="divBox divColumn2 texto1 texto4">Query Test:</div><div class="divBox divColumn"><div class="divBox texto1 texto2" style="display:inline;">[d]</div><input id="fieldQueryTest" class=editionitem type="Text" size="150" value="30872-2/13.DC.RC"/></div>
+</div>
+<div class="divBox divLine texto1 texto2">
+	[a] - In milliseconds.
+</div>
+<div class="divBox divLine texto1 texto2">
+	[b] - Do not use anything below 100 ms (recommended 3000 ms).
+</div>
+<div class="divBox divLine texto1 texto2">
+	[c] - Do not use anything below 10000 ms (recommended 10000 ms).
+</div>
+<div class="divBox divLine texto1 texto2">
+	[d] - Beware of heavy searches.
+</div>
+<div class="divBox divLine texto1 texto2 texto3">
+	General Information
+</div>
+<div class="divLine">
+	<div class="divBox divColumn texto1">
+	Time/Date That Started:
+	</div>
+	<div class="divBox divColumn texto1 texto2" id="timeDateThatStarted">
+	0
+	</div>
+</div>
+<div class="divLine">
+	<div class="divBox divColumn texto1" >
+	Time/Date Terminated:
+	</div>
+	<div class="divBox divColumn texto1 texto2" id="timeDateThatTerminated">
+	0
+	</div>
+</div>
+<div class="divLine">
+	<div class="divBox divColumn texto1" >
+	Elapsed Time/Date:
+	</div>
+	<div class="divBox divColumn texto1 texto2" id="timeDateElapsed">
+	0
+	</div>
+</div>
+<div class="divLine">
+	<div title="LightBase latency." class="divBox divColumn colorsLegend0 colorsLegend1"></div>
+	<div title="LightBase latency." class="divBox divColumn colorsText1">LightBase latency.</div>
+	<div title="Network Latency." class="divBox divColumn colorsLegend0 colorsLegend2"></div>
+	<div title="Network Latency." class="divBox divColumn colorsText2">Network Latency.</div>
+	<div title="Above latency average." class="divBox divColumn colorsLegend0 colorsLegend3"></div>
+	<div title="Above latency average." class="divBox divColumn colorsText3">Above latency average.</div>
+	<div title="Maximum." class="divBox divColumn colorsLegend0 colorsLegend4"></div>
+	<div title="Maximum." class="divBox divColumn colorsText4">Maximum.</div>
+	<div title="Error." class="divBox divColumn colorsLegend0 colorsLegend5"></div>
+	<div title="Error." class="divBox divColumn colorsText5">Error.</div>
+</div>
+<div class="divLine">
+	<div class="divColumn3">
+		<div class="divBox divLine texto1 texto2 texto3">
+			LightBase Latency
+		</div>
+		<div class="divLine">
+			<div class="divBox divColumn texto1" >
+			Latency Average:
+			</div>
+			<div class="divBox divColumn texto1 texto2" id="timeAverageNowLB">
+			0
+			</div>
+		</div>
+		<div class="divLine">
+			<div class="divBox divColumn texto1" >
+			Maximum:
+			</div>
+			<div class="divBox divColumn texto1 texto2" id="valueMaximumLB">
+			0
+			</div>
+		</div>
+		<div class="divLine">
+			<div class="divBox divColumn texto1" >
+			Minimum:
+			</div>
+			<div class="divBox divColumn texto1 texto2" id="valueMinimumLB">
+			0
+			</div>
+		</div>
+		<div class="divLine" id="benchmarkOutPutDivLB">
+		</div>
+	</div>
+	<div class="divColumn3">
+		<div class="divBox divLine texto1 texto2 texto3">
+			Network Latency
+		</div>
+		<div class="divLine">
+			<div class="divBox divColumn texto1" >
+			Latency Average:
+			</div>
+			<div class="divBox divColumn texto1 texto2" id="timeAverageNowNT">
+			0
+			</div>
+		</div>
+		<div class="divLine">
+			<div class="divBox divColumn texto1" >
+			Maximum:
+			</div>
+			<div class="divBox divColumn texto1 texto2" id="valueMaximumNT">
+			0
+			</div>
+		</div>
+		<div class="divLine">
+			<div class="divBox divColumn texto1" >
+			Minimum:
+			</div>
+			<div class="divBox divColumn texto1 texto2" id="valueMinimumNT">
+			0
+			</div>
+		</div>
+		<div class="divLine"  id="benchmarkOutPutDivNT">
+		</div>
+	</div>
+</div>
+</body>
+</html>

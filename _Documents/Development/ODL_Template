@@ -1,0 +1,450 @@
+class GRH
+(extent GRH description = "GESTÃO DE RECURSOS HUMANOS")
+{
+	attribute string AuxCdFuncao description="AuxCdFuncao" textualindex size=10;
+	attribute string aux_cpf description="aux_cpf" textualindex size=14;
+	attribute string aux_nome description="aux_nome" textualindex size=500;
+	attribute string aux_udb description="aux_udb" textualindex size=30;
+	attribute string bairro description="BAIRRO" textualindex size=30;
+	attribute string cep description="C.E.P." textualindex size=15;
+	attribute string chave description="chave" index textualindex unique size=30;
+	attribute string cidade_res description="CIDADE" textualindex size=30;
+	attribute string conjuge description="CONJUGE" index textualindex size=200;
+	attribute string cpf description="Nº C.P.F." textualindex size=14;
+	attribute string curso_dadosPessoais description="curso_dadosPessoais" textualindex size=100;
+	attribute string ddd_cel description="DDD CELULAR" textualindex size=3;
+	attribute string ddd_resd description="DDD RESIDENCIAL" textualindex size=3;
+	attribute double decVencimento description="decVencimento" index;
+	attribute date dtEmissaoIdFunc description="DATA DE EMISSÃO DA IDENTIDADE FUNCIONAL" index nullindex;
+	attribute date dtEmissaoIdProf description="Data Emissao id Profissional" index nullindex;
+	attribute date dtFinalEstProbatorio description="FINAL ESTÁGIO PROBATÓRIO" index;
+	attribute date dtHmlgEstProbatorio description="HOMOLAGAÇÃO ESTÁGIO PROBATÓRIO" index;
+	attribute date dtHoraTrabCadEm description="Horario de trabalho Cad/Alterado em";
+	attribute date dtInicioEstgConfimatorio description="DATA INÍCIO ESTÁGIO CONFIRMATÓRIO" index;
+	attribute date dtInicioEstProbatorio description="INICIO ESTAGIO PROBATORIO" index;
+	attribute date DtRemocao description="Data Remoção" index;
+	attribute date dt_alteracao_reg description="DATA ALTERAÇÃO" index;
+	attribute date dt_emissao_cpf description="DATA EMISSÃO CPF" index;
+	attribute date dt_emissao_pis_pasep description="DATA EMISSÃO P.I.S - P.A.S.E.P" index;
+	attribute date dt_emissao_rg description="EMISSÃO IDENTIDADE" index;
+	attribute date dt_exercicio_pgfn description="DATA EXERCÍCIO - PGFN" index;
+	attribute date dt_inclusao_reg description="DATA INCLUSÃO" index;
+	attribute date dt_nascimento description="NASCIMENTO" index;
+	attribute date dt_posse_pgfn description="ASSINATURA DA POSSE - PGFN " index;
+	attribute date dt_pub_exercicio_pgfn description="DATA PUBLICAÇÃO EXERCÍCIO - PGFN" index;
+	attribute date dt_pub_nomeacao_pgfn description="DATA PUBLICAÇÃO NOMEAÇÃO - PGFN" index;
+	attribute string email_pessoal description="E-MAIL" textualindex size=100;
+	attribute string end_res description="ENDEREÇO RESIDENCIAL" textualindex size=100;
+	attribute string escolaridade description="ESCOLARIDADE" index textualindex size=50;
+	attribute string estado description="ESTADO" index textualindex size=2;
+	attribute string estado_civil description="ESTADO CIVIL" index textualindex size=20;
+	attribute string grupo_sanguineo description="grupo_sanguineo" textualindex size=5;
+	attribute string hablit_cargo description="Habilitação CARGO" size=300;
+	attribute string hablit_cargo_terceirizado description="Habilitação Cargo do Terceirazado" size=150;
+	attribute string hablit_ddd_tel_exrc_ltc description="Habilitação DDD FONE  EXERCICIO LOTAÇÃO" size=3;
+	attribute string hablit_email_ltc description="Habilitação E-MAIL INSTITUCIONAL" size=80;
+	attribute string hablit_exercicio_ltc description="Habilitação EXERCÍCIO" size=300;
+	attribute string hablit_nome description="Habilitação NOME" size=400;
+	attribute string hablit_status description="Habilitação STATUS" size=20;
+	attribute string hablit_tel_exerc_ltc description="Habilitação TELEFONE EXERCÍCIO" size=13;
+	attribute string hablit_unid_exercicio_estagiario description="Habilitação Unidade de exercício do estagiário" size=150;
+	attribute string hablit_unid_exercicio_terc description="Habilitação Unidade Exercicio Terceirizado" size=150;
+	attribute time hrHoraTrabEntrada description="Horario de trabalho Entrada";
+	attribute time hrHoraTrabRetAlmoco description="Horario de trabalho Retorno Almoco";
+	attribute time hrHoraTrabSaida description="Horario de trabalho Saida";
+	attribute time hrHoraTrabSaidaAlmoco description="Horario de trabalho Saida Almoço";
+	attribute time hr_alteracao_reg description="HORA ALTERAÇÃO" index;
+	attribute time hr_inclusao_reg description="HORA INCLUSÃO" index;
+	attribute string lot_quebra description="LOTAÇÃO - QUEBRA" textualindex size=100;
+	attribute string mae description="MÃE" index textualindex size=200;
+	attribute string nacionalidade description="NACIONALIDADE" index textualindex size=100;
+	attribute string naturalidade description="NATURALIDADE" textualindex size=100;
+	attribute string nome description="NOME" index textualindex size=400;
+	attribute string nroIdFuncional description="Nº DA IDENTIDADE FUNCIONAL" index unique nullindex size=17;
+	attribute string nroIdProfissional description="Número Identidade Profissional" index unique nullindex size=17;
+	attribute string n_exercicio_pgfn description="Nº DOCTO EXERCÍCIO - PGFN" textualindex size=20;
+	attribute string n_identidade description="Nº IDENTIDADE" textualindex size=20;
+	attribute string n_reservista description="Nº RESERVISTA" textualindex size=30;
+	attribute document observacoes description="OBSERVAÇÕES" textualindex;
+	attribute string orgao_emissor_rg description="ÓRGÃO EMISSOR" index textualindex size=10;
+	attribute string orgEmissorIdFunc description="ORG. EMISSOR DA IDENTIDADE FUNCIONAL" textualindex nullindex size=8;
+	attribute string orgEmissorIdProf description="orgão emissor id profissional" textualindex nullindex size=8;
+	attribute string pai description="PAI" index textualindex size=200;
+	attribute string pis_pasep description="Nº P.I.S. - P.A.S.E.P." textualindex size=20;
+	attribute string pne description="pne" textualindex size=100;
+	attribute string psqCoordStr description="psqCoordStr" index textualindex size=200;
+	attribute string psqDiasAfst description="psqDiasAfst" textualindex size=5;
+	attribute string psqEstado description="psqEstado" index textualindex nullindex size=6;
+	attribute string psqExercicio description="psqExercicio" index textualindex size=500;
+	attribute string psqLotacao description="psqLotacao" index textualindex size=500;
+	attribute string sexo description="SEXO" index textualindex size=15;
+	attribute string siape description="SIAPE" index textualindex unique size=12;
+	attribute string siapecad description="SIAPECAD" textualindex size=8;
+	attribute string siapedv description="SIAPE-DV" textualindex size=8;
+	attribute string situacao_pgfn description="SITUAÇÃO - PGFN" index textualindex size=250;
+	attribute string status description="STATUS" index textualindex size=20;
+	attribute string str1opcao description="1° Opção Remoção" index textualindex size=50;
+	attribute string str2opcao description="2° Opção Remoção" index textualindex size=50;
+	attribute string str3opcao description="3° Opção Remoção" index textualindex size=50;
+	attribute string str4opcao description="4° Opção Remoção" index textualindex size=50;
+	attribute string str5opcao description="5° Opção Remoção" index textualindex size=50;
+	attribute string strAntiguidade description="Antiguidade" textualindex size=6;
+	attribute string strAuxPerfilLogin description="strAuxPerfilLogin" index textualindex size=5;
+	attribute string strClficacaoConcurso_pgfn description="CLASSIFICAÇÃO EM CONCURSO - PGFN" textualindex size=5;
+	attribute string strconcurso_pgfn description="CONCURSO - PGFN" textualindex size=100;
+	attribute string strEstavelEstgConfimatorio description="ESTÁVEL ESTÁGIO CONFIRMATÓRIO" textualindex size=10;
+	attribute string strFormaProvimento description="FORMA DE PROVIMENTO" textualindex size=500;
+	attribute string strFormaSaida description="strFormaSaida" textualindex size=300;
+	attribute string strHoraTrabCadPor description="Horario de trabalho Cadastrado Por" size=20;
+	attribute string strRel60Dias description="Relatorio Inferior 60 dias" textualindex size=5;
+	attribute string strSituacaoEstProbatorio description="SITUAÇÃO EST. PROBATORIO" index textualindex size=6;
+	attribute string strTmpSrvAdDrtSp description="TMP SRV - ADM DIRETA - EM" textualindex size=6;
+	attribute string strTmpSrvAdDrtSpf description="TMP SRV - ADM DIRETA - FD" textualindex size=6;
+	attribute string strTpSvAdIndSpAF description="TMP SRV - ADM INDIRETA -EMAF" textualindex size=6;
+	attribute string strTpSvAdIndSpEPSM description="TMP SRV - ADM INDIRETA - EMEPSM" textualindex size=6;
+	attribute string strTpSvAdIndSpfAF description="TMP SRV - ADM INDIRETA- FDAF" textualindex size=6;
+	attribute string strTpSvAdIndSpfEPSM description="TMP SRV - ADM INDIRETA- FDEPSM" textualindex size=6;
+	attribute string strUltimoOrgaoContratanteTerceir description="Ultimo Orgão Contratante (terceirizado)" index size=40;
+	attribute string strUsrRemocao description="Usuario Remoção" textualindex size=10;
+	attribute string tel_celular description="TEL. CELULAR" textualindex size=20;
+	attribute string tel_residencial description="TEL. RESIDENCIAL" textualindex size=20;
+	attribute string tp_exercicio_pgfn description="TIPO DOCTO EXERCÍCIO - PGFN" index textualindex size=100;
+	attribute string tp_nomeacao_pgfn description="TIPO DOCTO NOMEAÇÃO - PGFN" index textualindex size=100;
+	attribute date tt_dt_emissao description="EMISSÃO" index;
+	attribute string tt_eleitor description="TÍTULO ELEITOR" textualindex size=20;
+	attribute string tt_secao description="SEÇÃO ELEITORAL" index textualindex size=20;
+	attribute string tt_uf description="U.F." index textualindex size=2;
+	attribute string tt_zona description="ZONA ELEITORAL" index textualindex size=20;
+	attribute document txtObservacaoEstProbatorio description="OBSERVAÇÃO ESTÁGIO PROBATÓRIO" textualindex;
+	attribute string uf_res description="U.F. RESIDENCIAL" index textualindex size=3;
+	attribute string user_alteracao_reg description="USUÁRIO ALTERAÇÃO" textualindex size=20;
+	attribute string user_inclusao_reg description="USUÁRIO INCLUSÃO" textualindex size=20;
+	attribute set<string> carga_horaria description="carga_horaria" index size=14;
+	attribute set<
+		struct{
+			attribute string terc_empresa description="Empresa do Terceirozado" index size=100;
+			attribute string unid_exercicio_terc description="Unidade Exercicio Terceirizado" index size=150;
+			attribute date dt_inicio_terceirizado description="Data de Inicio do terceirozado" index;
+			attribute date dt_final_terceirizado description="Data de recisão do do terceirizado" index;
+			attribute document obs_tercerizado description="Observação Terceirizado" textualindex;
+			attribute string cargo_terceirizado description="Cargo do Terceirazado" index size=150;
+			attribute string coordSetorTerc description="SETOR TERCEIRIZADO" textualindex size=50;
+			attribute string strOrgaoContratanteTerceirizado description="Orgão Contratante (terceirizado)" index size=40;
+		}
+		> TERCEIRIZADO;
+	attribute set<
+		struct{
+			attribute string inst_ensino description="Instituição de Ensino" index size=100;
+			attribute string contratante description="Contratante do Estagiário" index size=50;
+			attribute string periodo_estagio_OFF description="Período de Estágio" index size=50;
+			attribute string supervisor_estagio_OFF description="Supervidor do Estágio" index size=100;
+			attribute date dt_inicio_estagio description="Data de inicio de estágio" index;
+			attribute document obs_estagio description="Observação para rescisão de contrato do estagiário";
+			attribute string curso description="Curso" index size=100;
+			attribute date dt_final_estagio description="Data de Recisão do estágio" index;
+			attribute string unid_exercicio_estagiario description="Unidade de exercício do estagiário" index size=150;
+			}
+		> ESTAGIARIO;
+	attribute set<
+		struct{
+			attribute date dt_prt_exercicio description="DATA PORTARIA EXERCÍCIO" index;
+			attribute date dt_pub_exercicio_OFF description="DATA PUBLICAÇÃO PORTARIA" index;
+			attribute string n_prt_exercicio description="Nº PORTARIA EXERCÍCIO" index size=20;
+			attribute string lotacao description="LOTAÇÃO" index textualindex size=300;
+			attribute string frm_prvm_ltc description="FORMA PROVIMENTO LOTACAO" index textualindex size=20;
+			attribute string n_prt_ltc description="Nº PORTARIA LOTAÇÃO" textualindex size=20;
+			attribute date dt_prt_ltc description="DATA PORTARIA LOTAÇÃO" index;
+			attribute date dt_pub_prt_ltc description="DATA PUBLICAÇÃO PORTARIA LOTAÇÃO" index;
+			attribute string exercicio_ltc description="EXERCÍCIO" index textualindex size=300;
+			attribute string coord_str_ltc description="COORDENAÇÃO SETOR EXERCÍCIO" index textualindex soundindex size=50;
+			attribute string tel_exerc_ltc description="TELEFONE EXERCÍCIO" textualindex size=13;
+			attribute string email_ltc description="E-MAIL INSTITUCIONAL" textualindex size=80;
+			attribute date dt_memo_aprst_ltc description="DATA MEMORANDO APRESENTAÇÃO" index;
+			attribute date dt_inicio_exrc_ltc description="DATA INÍCIO EXERCÍCIO" index;
+			attribute date dt_final_exrc_ltc description="DATA FINAL EXERCÍCIO" index;
+			attribute string n_memo_aprst_ltc description="Nº MEMORANDO APRESENTAÇÃO" textualindex size=20;
+			attribute string tel_fax_exrc_ltc description="TELEFONE FAX EXERCÍCIO" textualindex size=13;
+			attribute date dt_memo_sd_ltc description="DATA MEMORANDO SAÍDA" index;
+			attribute string user_inclusao_ltc description="USUÁRIO INCLUSÃO LOTAÇÃO" textualindex size=20;
+			attribute date dt_inclusao_ltc description="DATA INCLUSÃO LOTAÇÃO" index;
+			attribute time hr_inclusao_ltc description="HORA INCLUSÃO LOTAÇÃO" index;
+			attribute string user_alt_lotacao description="USUÁRIO ALTERAÇÃO LOTAÇÃO" textualindex size=20;
+			attribute date dt_alt_ltc description="DATA ALTERAÇÃO LOTAÇÃO" index;
+			attribute time hr_alt_ltc description="HORA ALTERAÇÃO LOTAÇÃO" index;
+			attribute string n_memo_sd_ltc description="Nº MEMORANDO SAÍDA" textualindex size=20;
+			attribute string ddd_tel_exrc_ltc description="DDD FONE  EXERCICIO LOTAÇÃO" textualindex size=3;
+			attribute string ddd_tel_fax_exrc_ltc description="DDD FONE FAX EXERCICIO LOTAÇÃO" textualindex size=3;
+			attribute string comp_ltc description="COMPLEMENTO LOTAÇÃO" textualindex size=300;
+			attribute string comp_exrc_ltc description="COMPLEMENTO EXERCICIO LOTACAO" textualindex size=300;
+			attribute boolean temporario_ltc description="TEMPORARIO EXERCÍCIO" index;
+			attribute string strEstado description="ESTADO - LOCALIZAÇÃO" index textualindex size=5;
+			attribute boolean strCfmPLabore_OFF description="CONFIRMA PRÓ-LABORE - LTC" index;
+			attribute document txtObsExerc description="OBSERVAÇÃO EXERC" textualindex;
+			attribute string func_exerc_ltc description="func_exerc_ltc" index textualindex size=90;
+		}
+		> Exercicio;
+	attribute set<
+		struct{
+			attribute document txtMotivacaoNota description="MOTIVAÇÃO DA NOTA" textualindex;
+			attribute string strDiasAfst description="Nº DIAS AFASTAMENTO" textualindex size=4;
+			attribute string strDiasAvPrc description="Nº DIAS AVALIACAO PARCIAL" textualindex size=5;
+			attribute string strTrAvaliacao description="TRIMESTRE DE AVALIACAO" index textualindex size=50;
+			attribute string strNDiasTrm description="Nº DIAS TRIMESTRE" textualindex size=5;
+			attribute string strC1Cnto description="C1 - CONCEITO" index textualindex size=30;
+			attribute string strC2Cnto description="C2 - CONCEITO" index textualindex size=30;
+			attribute string strC3Cnto description="C3 - CONCEITO" index textualindex size=30;
+			attribute string strC4Cnto description="C4 - CONCEITO" index textualindex size=30;
+			attribute string strC5Cnto description="C5 - CONCEITO" index textualindex size=30;
+			attribute string strC1Pnto description="C1 - PONTUAÇAO" index textualindex size=5;
+			attribute string strC2Pnto description="C2 - PONTUACAO" index textualindex size=5;
+			attribute string strC3Pnto description="C3 - PONTUACAO" index textualindex size=5;
+			attribute string strC4Pnto description="C4 - PONTUCAO" index textualindex size=5;
+			attribute string strC5Pnto description="C5 - PONTUACAO" index textualindex size=5;
+			attribute string strTtPntSrv description="TOTAL DE PONTOS SERVIDOR" textualindex nullindex size=5;
+			attribute string strPrcPrdAvdo description="PARCELA DO PERÍODO AVALIADO" textualindex nullindex size=5;
+			attribute string strPrdAvaliacao description="PERIODO DE AVALIACAO" index textualindex size=200;
+			attribute string strValidacao description="VALIDAÇÃO DE FICHA" textualindex size=6;
+			attribute string strRecbRecFicha description="Recebimento Recurso a Ficha" textualindex size=5;
+			attribute string strRecbRecComite description="Recebimento Recurso ao Comite" textualindex size=5;
+			attribute date strDtFicha description="Data Recebimento Ficha" index;
+			attribute date strDtComite description="Data Recebimento Comite" index;
+			attribute string strNroPA description="Numero do P.A" textualindex size=20;
+			attribute date strDtValidacao description="DATA VALIDAÇÃO" index;
+			attribute string strhomologacao description="strHomologacao" textualindex size=10;
+			attribute date strDtHomologacao description="Data Homologação" index;
+			attribute double dblArredondamento description="Arredondamento Nota" index;
+		}
+		> ProLabore;
+	attribute set<
+		struct{
+			attribute string cargo description="CARGO" index textualindex size=300;
+			attribute string tp_nomeacao_crg description="TIPO DOCTO NOMEAÇÃO CARGO" index textualindex size=100;
+			attribute string n_nomeacao_crg description="Nº DOCTO NOMEAÇÃO CARGO" textualindex size=20;
+			attribute date dt_nomeacao_crg description="DATA NOMEAÇÃO CARGO" index;
+			attribute date dt_pub_nomeacao_crg description="DATA PUBLICAÇÃO NOMEAÇÃO CARGO" index;
+			attribute date dt_posse_crg description="ASSINATURA DA POSSE CARGO" index;
+			attribute string tp_exercicio_crg description="TIPO DOCTO EXERCÍCIO CARGO" index textualindex size=30;
+			attribute string n_exercicio_crg description="Nº DOCTO EXERCÍCIO CARGO" textualindex size=20;
+			attribute date dt_exercicio_crg description="DATA EXERCÍCIO CARGO" index;
+			attribute date dt_pub_exercicio_crg description="DATA PUBLICAÇÃO EXERCÍCIO CARGO" index;
+			attribute date dt_inicio_exerc_crg description="DATA INÍCIO EXERCÍCIO CARGO" index;
+			attribute string tp_exoneracao_crg description="TIPO DOCTO EXONERAÇÃO CARGO" index textualindex size=30;
+			attribute string n_exoneracao_crg description="Nº DOCTO EXONERAÇÃO CARGO" textualindex size=20;
+			attribute date dt_exoneracao_crg description="DATA EXONERAÇÃO CARGO" index;
+			attribute date dt_pub_exoneracao_crg description="DATA PUBLICAÇÃO EXONERAÇÃO CARGO" index;
+			attribute date dt_final_exerc_crg description="DATA FINAL EXERCÍCIO CARGO" index;
+			attribute string categ_classe_crg description="CATEGORIA - CLASSE" index textualindex size=300;
+			attribute string NDctoCtgClsCrg description="Nº DOCTO CAT- CLSS" textualindex size=300;
+			attribute date DtDctoCtgClsCrg description="DATA DCTO CAT - CLSS" index;
+			attribute date DtPubCtgClsCrg description="DATA PUB CAT - CLSS" index;
+			attribute string TpDctoCtgClsCrg description="TIPO DCTO CAT - CLSS" textualindex size=20;
+			attribute string nivel_padrao_crg description="NÍVEL PADRÃO" index textualindex size=4;
+			attribute date DtDctoPrdCrg description="DATA DCTO PADRAO" index;
+			attribute date DtPubPrdCrg description="DATA PUB PADRAO" index;
+			attribute string user_inclusao_crg description="USUÁRIO INCLUSÃO CARGO" textualindex size=20;
+			attribute time hr_inclusao_crg description="HORA INCLUSÃO CARGO" index;
+			attribute date dt_inclusao_crg description="DATA INCLUSÃO CARGO" index;
+			attribute date dt_altcao_crg description="DATA ALTERAÇÃO CARGO" index;
+			attribute time hr_altcao_crg description="HORA ALTERACAO CARGO" index;
+			attribute string user_altcao_crg description="USUÁRIO ALTERAÇÃO CARGO" textualindex size=20;
+			attribute string strCdCargo_OFF description="strCdCargo" textualindex nullindex size=7;
+			attribute string cargo_outros description="cargo_outros" textualindex size=100;
+		}
+		> Cargo;
+	attribute set<
+		struct{
+			attribute string funcao description="FUNÇÃO" index textualindex size=300;
+			attribute string user_inclusao_fnc description="USUÁRIO INCLUSÃO FUNÇÃO" textualindex size=20;
+			attribute date dt_inclusao_fnc description="DATA INCLUSÃO FUNÇÃO" index;
+			attribute time hr_inclusao_fnc description="HORA INCLUSÃO FUNÇÃO" index;
+			attribute string user_alt_fnc description="USUÁRIO ALTERAÇÃO FUNÇÃO" textualindex size=20;
+			attribute date dt_alt_fnc description="DATA ALTERAÇÃO FUNÇÃO" index;
+			attribute time hr_alt_fnc description="HORA ALTERAÇÃO FUNÇÃO" index;
+			attribute string strCdFuncao description="strCdFuncao" textualindex size=7;
+			attribute date dtInicioFnc description="DATA INICIO FUNÇÃO" index;
+			attribute date dtFinalFnc description="DATA FINAL FUNÇÃO" index;
+		}
+		> Funcao;
+	attribute set<
+		struct{
+			attribute string n_nomeacao_gtf description="Nº PORTARIA NOMEAÇÃO GRATIFICAÇÃO" textualindex size=20;
+			attribute date dt_nomeacao_gtf description="DATA PORTARIA NOMEAÇÃO GRATIFICAÇÃO" index;
+			attribute date dt_posse_gtf description="ASSINATURA POSSE GRATIFICAÇÃO" index;
+			attribute date dt_pub_nomeacao_gtf description="DATA PUBLICAÇÃO NOMEAÇÃO GRATIFICAÇÃO" index;
+			attribute string n_exercicio_gtf description="Nº PORTARIA EXERCÍCIO GRATIFICAÇÃO" textualindex size=20;
+			attribute date dt_exercicio_gtf description="DATA PORTARIA EXERCÍCIO GRATIFICAÇÃO" index;
+			attribute date dt_pub_exercicio_gtf description="DATA PUBLICAÇÃO EXERCÍCIO GRATIFICAÇÃO" index;
+			attribute string n_exoneracao_gtf description="Nº PORTARIA EXONERAÇÃO GRATIFICAÇÃO" textualindex size=20;
+			attribute date dt_exoneracao_gtf description="DATA PORTARIA EXONERAÇÃO GRATIFICAÇÃO" index;
+			attribute date dt_pub_exoneracao_gtf description="DATA PUBLICAÇÃO EXONERAÇÃO GRATIFICAÇÃO" index;
+			attribute date dt_vigencia_gtf description="DATA VIGÊNCIA DA EXONERAÇÃO GRATIFICAÇÃO" index;
+			attribute string tp_nvl_gtf description="TIPO-NÍVEL GRATIFICAÇÃO" index textualindex size=300;
+			attribute string user_inclusao_gtf description="USUÁRIO INCLUSÃO GRATIFICAÇÃO" textualindex size=20;
+			attribute date dt_inclusao_gtf description="DATA INCLUÇÃO GRATIFICAÇÃO" index;
+			attribute time hr_inclusao_gtf description="HORA INCLUSÃO GRATIFICAÇÃO" index;
+			attribute string user_alt_gtf description="USUÁRIO ALTERAÇÃO GRATIFICAÇÃO" textualindex size=20;
+			attribute date dt_alt_gtf description="DATA ALTERAÇÃO GRATIFICAÇÃO" index;
+			attribute time hr_alt_gtf description="HORA ALTERAÇÃO GRATIFICAÇÃO" index;
+			attribute string strCdGratificacao description="strCdGratificacao" textualindex size=20;
+			attribute string funcao_Grtf description="funcao_Grtf" index textualindex size=150;
+		}
+		> Gratificacao;
+	attribute set<
+		struct{
+			attribute string fnc_substituicao description="FUNÇÃO SUBSTITUÍÇÃO" index textualindex size=300;
+			attribute string frm_sbt description="FORMA SUBSTITUIÇÃO" index textualindex size=30;
+			attribute string n_desg_sbt description="Nº PORTARIA DESIGNAÇÃO SUBSTITUIÇÃO" textualindex size=20;
+			attribute date dt_vgn_desg_sbt description="DATA VIGÊNCIA PORTARIA DESIGNAÇÃO SUBSTITUIÇÃO" index;
+			attribute date dt_pub_desg_sbt description="DATA PUBLICAÇÃO PORTARIA DESIGNAÇÃO SUBSTITUIÇÃO" index;
+			attribute date dt_assnt_desg_sbt description="DATA ASSINATURA DESIGNAÇÃO SUBSTITUIÇÃO" index;
+			attribute date dt_desg_sbt description="DATA PORTARIA DESIGNAÇÃO SUBSTITUIÇÃO" index;
+			attribute date dt_inicio_exrc_sbt description="DATA INÍCIO EXERCÍCIO SUBSTITUIÇÃO" index;
+			attribute date dt_final_exrc_sbt description="DATA FINAL EXERCÍCIO SUBISTITUIÇÃO" index;
+			attribute document obs_sbt description="OBSERVAÇÃO SUBSTITUIÇÃO " textualindex;
+			attribute string user_inclusao_sbt description="USUÁRIO INCLUSÃO SUBST." textualindex size=20;
+			attribute date dt_inclusao_sbt description="DATA INCLUSÃO SUSBT." index;
+			attribute time hr_inclusao_sbt description="HORA INCLUSÃO SUBT." index;
+			attribute string user_alt_sbt description="USUÁRIO ALTERAÇÃO SUBT." textualindex size=20;
+			attribute date dt_alt_sbt description="DATA ALTERAÇÃO SUBST." index;
+			attribute time hr_alt_sbt description="HORA ALTERAÇÃO SUBST." index;
+			attribute string strCdSubstituicao description="strCdSubstituicao" textualindex size=20;
+			attribute string titular_subst_obs description="titular_subst_obs" textualindex size=100;
+			attribute string tp_nvl_gtf_subst description="tp_nvl_gtf_subst" index textualindex size=300;
+		}
+		> Substituicao;
+	attribute set<
+		struct{
+			attribute string afastamento description="AFASTAMENTO" index textualindex size=200;
+			attribute date dt_inicio_afst description="DATA INICIAL AFASTAMENTO" index;
+			attribute date dt_final_afst description="DATA FINAL AFASTAMENTO" index;
+			attribute string qnt_dias_afst description="QUANTIDADE DIAS AFASTAMENTO" textualindex size=5;
+			attribute string n_prc_afst description="Nº PROCESSO AFASTAMENTO" textualindex size=20;
+			attribute string n_prt_afst description="Nº PORTARIA AFASTAMENTO" textualindex size=30;
+			attribute date dt_prt_afst description="DATA PORTARIA AFASTAMENTO" index;
+			attribute date dt_pub_prt_afst description="DATA PUBLICAÇÃO PORTARIA AFASTAMENTO" index;
+			attribute document obs_afst description="OBSERVAÇÃO AFASTAMETNO" textualindex;
+			attribute time hr_inclusao_afst description="HORA INCLUSÃO AFAST." index;
+			attribute string user_alt_afst description="USUÁRIO ALTERAÇÃO AFAST." textualindex size=20;
+			attribute date dt_alt_afst description="DATA ALTERAÇÃO AFAST." index;
+			attribute string user_inclusao_afst description="USUÁRIO INCLUSÃO AFAST." textualindex size=20;
+			attribute date dt_inclusao_afst description="DATA INCLUSÃO AFAST." index;
+			attribute time hr_alt_afst description="HORA ALTERAÇÃO AFAST." index;
+			attribute string strCdAfastamento description="strCdAfastamento" textualindex size=20;
+			attribute string codsiapeafast description="codsiapeafast" index textualindex size=50;
+		}
+		> Afastamento;
+	attribute set<
+		struct{
+			attribute string penalidade description="PENALIDADE" index textualindex size=150;
+			attribute date dt_inicio_afst_pnl description="DATA INICIO AFASTAMENTO" index;
+			attribute date dt_final_afst_pnl description="DT FINAL AFASTAMENTO" index;
+			attribute string qnt_dias_afst_pnl description="QUANTDADE DIAS AFASTAMENTO" textualindex size=5;
+			attribute string n_prt_pnl description="Nº PORTARIA DA PENALIDADE" textualindex size=30;
+			attribute date dt_prt_pnl description="DATA PORTARIA DA PENALIDADE" index;
+			attribute date dt_pub_prt_pnl description="DATA PUBLICAÇÃO PORTARIA PENALIDADE" index;
+			attribute document obs_pnl description="OBSERVAÇÃO PENALIDADE" textualindex;
+			attribute string n_pa description="Nº P.A." textualindex size=20;
+			attribute string assunto_pa description="ASSUNTO P.A." textualindex size=200;
+			attribute string user_inclusao_pa description="USUÁRIO INCLUSÃO P.A." textualindex size=20;
+			attribute date dt_inclusao_pa description="DATA INCLUSÃO P.A." index;
+			attribute time hr_inclusao_pa description="HORA INCLUSÃO P.A." index;
+			attribute string user_alt_pa description="USUÁRIO ALTERAÇÃO P.A." textualindex size=20;
+			attribute date dt_alt_pa description="DATA ALTERAÇÃO P.A." index;
+			attribute time hr_alt_pa description="HORA ALTERAÇÃO P.A." index;
+			attribute string tipo_pa description="Tipo P.A." textualindex size=100;
+			attribute boolean booGerouPenalidade description="Gerou Penalidade" index;
+		}
+		> Processos;
+	attribute set<
+		struct{
+			attribute short ano_frs description="ANO FÉRIAS" index;
+			attribute date dt_inicio_prm_frs description="DATA INÍCIO 1º PERIODO" index;
+			attribute date dt_final_prm_frs description="DATA FINAL 1º PERIODO" index;
+			attribute boolean admt_prm_frs description="ADIANTAMENTO DE FÉRIAS 1º PERIODO" index;
+			attribute boolean dctrc_prm_frs description="ADIANTAMENTO 13º SALÁRIO 1º PERIODO" index;
+			attribute date dt_inicio_sgd_frs description="DATA INÍCIO 2º PERIODO" index;
+			attribute date dt_final_sgd_frs description="DATA FINAL 2º PERIODO" index;
+			attribute boolean admt_sgd_frs description="ADIANTAMENTO DE FÉRIAS 2º PERIODO" index;
+			attribute boolean dctrc_sgd_frs description="ADIANTAMENTO 13º SALÁRIO 2º PERIODO" index;
+			attribute date dt_inicio_trc_frs description="DATA INÍCIO 3º PERIODO" index;
+			attribute date dt_final_trc_frs description="DATA FINAL 3º PERIODO" index;
+			attribute boolean admt_trc_frs description="ADIANTAMENTO DE FÉRIAS 3º PERIODO" index;
+			attribute boolean dctrc_trc_frs description="ADIANTAMENTO 13º SALÁRIO 3º PERIODO" index;
+			attribute date dt_inc_prm_alt_frs description="DATA INÍCIO 1º PERIODO ALTERAÇÃO" index;
+			attribute date dt_fn_prm_alt_frs description="DATA FINAL 1º PERIODO ALTERAÇÃO" index;
+			attribute boolean admt_prm_alt_frs description="ADIANTAMENTO DE FÉRIAS 1º PERIODO ALTERAÇÃO" index;
+			attribute boolean admt_dctrc_alt_frs description="ADIANTAMENTO 13º SALÁRIO 1º PERIODO ALTERAÇÃO" index;
+			attribute date dt_inc_sgd_alt_frs description="DATA INÍCIO 2º PERIODO ALTERAÇÃO" index;
+			attribute date dt_fn_sgd_alt_frs description="DATA FINAL 2º PERIODO ALTERAÇÃO" index;
+			attribute boolean admt_sgd_alt_frs description="ADIANTAMENTO DE FÉRIAS 2º PERIODO ALTERAÇÃO" index;
+			attribute boolean dctrc_sgd_alt_frs description="ADIANTAMENTO 13º SALÁRIO 2º PERIODO ALTERAÇÃO" index;
+			attribute date dt_inc_trc_alt_frs description="DATA INÍCIO 3º PERIODO ALTERAÇÃO" index;
+			attribute date dt_fn_trc_alt_frs description="DATA FINAL 3º PERIODO ALTERAÇÃO" index;
+			attribute boolean admt_trc_alt_frs description="ADIANTAMENTO DE FÉRIAS 3º PERIODO ALTERAÇÃO" index;
+			attribute boolean dctrc_trc_alt_frs description="ADIANTAMENTO 13º SALÁRIO 3º PERIODO ALTERAÇÃO" index;
+			attribute string mtv_sgd_alt_frs description="MOTIVO  ALTERAÇÃO 2º PERIODO FÉRIAS" index textualindex size=100;
+			attribute string mtv_prm_alt_frs description="MOTIVO  ALTERAÇÃO 1º PERIODO FÉRIAS" index textualindex size=100;
+			attribute document just_prm_alt_frs description="JUSTIFICATIVA ALTERAÇÃO 1º PERIODO" textualindex;
+			attribute document just_sgd_alt_frs description="JUSTIFICATIVA ALTERAÇÃO 2º PERIODO" textualindex;
+			attribute document just_trc_alt_frs description="JUSTIFICATIVA ALTERAÇÃO 3º PERIODO" textualindex;
+			attribute string user_inclusao_frs description="USUÁRIO INCLUSÃO FÉRIAS" textualindex size=20;
+			attribute date dt_inclusao_frs description="DATA INCLUSÃO FÉRIAS" index;
+			attribute time hr_inclusao_frs description="HORA INCLUSÃO FÉRIAS" index;
+			attribute string user_alt_frs description="USUÁRIO ALTERAÇÃO FÉRIAS" textualindex size=20;
+			attribute date dt_alt_frs description="DATA ALTERAÇÃO FÉRIAS" index;
+			attribute time hr_alt_frs description="HORA ALTERAÇÃO FÉRIAS" index;
+			attribute string mtv_trc_alt_frs description="MOTIVO  ALTERAÇÃO 3º PERIODO FÉRIAS" index textualindex size=100;
+			attribute string dias_prm_frs description="DIAS 1º PERIODO" index textualindex size=3;
+			attribute string dias_sgnd_frs description="DIAS 2º PERIODO" index textualindex size=3;
+			attribute string dias_trc_frs description="DIAS 3º PERIODO" textualindex size=3;
+			attribute string dias_prm_alt_frs description="DIAS 1º PERIODO ALTERAÇÃO" textualindex size=3;
+			attribute string dias_sgd_alt_frs description="DIAS 2º PERIODO ALTERAÇÃO" textualindex size=3;
+			attribute string dias_trc_alt_frs description="DIAS 3º PERIODO ALTERAÇÃO" textualindex size=3;
+		}
+		> Ferias;
+	attribute set<
+		struct{
+			attribute string ENCARGOS_colstrTipo description="TIPO ENCARGOS" index textualindex size=100;
+			attribute string ENCARGOS_colstrParticipacao description="PARTICIPAÇÃO ENCARGOS" index textualindex size=100;
+			attribute string ENCARGOS_colstrNroPa description="Nº P.A. - ENCARGO" textualindex size=20;
+			attribute string ENCARGOS_colstrNroDocto description="Nº document ENCARGOS" textualindex size=20;
+			attribute string ENCARGOS_colstrTipoDocto description="TIPO document ENCARGOS" index textualindex size=100;
+			attribute date ENCARGOS_coldtDocto description="DATA document ENCARGOS" index;
+			attribute date ENCARGOS_coldtPublicacao description="DATA PUBLICAÇÃO ENCARGOS" index;
+			attribute date ENCARGOS_coldtinicio description="DATA INÍCIO ENCARGOS" index;
+			attribute date ENCARGOS_coldtFinal description="DATA FINAL ENCARGOS" index;
+			attribute string ENCARGOS_colstrUserInclusao description="USER INCLUSÃO ENCARGOS" textualindex size=50;
+			attribute date ENCARGOS_coldtInclusao description="DATA INCLUSAO ENCARGOS" index;
+			attribute time ENCARGOS_coltmAlteracao description="HORA ALTERACAO ENCARGOS" index;
+			attribute time ENCARGOS_coltmInclusao description="HORA INCLUSAO ENCARGOS" index;
+			attribute string ENCARGOS_colstrUserAlteracao description="USER ALTERACAO ENCARGOS" textualindex size=50;
+			attribute date ENCARGOS_coldtAlteracao description="DATA ALTERAÇÃO ENCARGOS" index;
+			attribute string ENCARGOS_colstrStatus description="STATUS ENCARGOS" textualindex size=100;
+			attribute string strCdEncargo description="strCdEncargo" index textualindex size=20;
+		}
+		> Encargos;
+	attribute set<
+		struct{
+			attribute string DEPENDENTE_colstrNome description="Nome Dependente" textualindex size=800;
+			attribute string DEPENDENTE_colstrParentesco description="Parentesco Dependente" textualindex size=20;
+			attribute string DEPENDENTE_colstrUserInclusao description="User Inclusão Pendente" textualindex size=30;
+			attribute date DEPENDENTE_coldtInclusao description="Data Inclusão Pendente" index;
+			attribute time DEPENDENTE_coltmInclusao description="Hora Inclusão Pendente" index;
+			attribute date DEPENDENTE_coldtAlteracao description="Data  Alteração Pendente" index;
+			attribute time DEPENDENTE_coltmAlteracao description="Hora  Alteração Pendente" index;
+			attribute string DEPENDENTE_colstrUserAlteracao description="User Alteração Pendente" textualindex size=50;
+			attribute date DEPENDENTE_coldtNascimento description="Data Nascimento Pendente" index;
+			attribute string DEPENDENTE_cpf description="DEPENDENTE_cpf" index textualindex size=14;
+			attribute boolean dependente_ir description="dependente_ir" index;
+			attribute boolean dependente_saude description="dependente_saude" index;
+			attribute boolean dependente_familiar description="dependente_familiar" index;
+		}
+		> Dependentes;
+	attribute set<
+		struct{
+			attribute date habilit_dt_alt description="Habilitação Dt Alteração" index;
+			attribute time habilit_hr_alt description="Habilitação Hr Alteração";
+			attribute string habilit_user_alt description="Habilitação User Alteração" textualindex size=60;
+		}
+		> Habilitacao;
+}

@@ -1,0 +1,491 @@
+<!--
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+-->
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+
+td.linha {
+	background:white;
+	height:1px;
+}
+
+td.linhaescura{
+	background:#808040;
+	height:1px;
+}
+
+.menu  {
+	font-family:Helvetica, Tahoma, Arial;
+	color:white;
+	font-size:9pt;
+}
+
+.ftemas  {
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:12pt;
+	font-weight:bold;
+	color:white;
+}
+
+.temas  {
+	background:#808040;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:12pt;
+	font-weight:bold;
+	color:white;
+}
+
+.lista {
+	background:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:none;
+	color:black;
+}
+
+.subtemas  {
+	background:#808040;
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:none;
+}
+
+.busca{
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:14pt;
+	font-weight:bold;
+}
+
+.busca_avancada {
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.resultado{
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+.detalhegrupo{
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+.detalhe{
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:normal;
+}
+
+.resultadogrupo{
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:normal;
+}
+.titulo{
+	color:#808040;
+	font-family:Helvetica, Tahoma, Arial;
+	font-weight:normal;
+	font-size:14pt;
+}
+
+a {
+	text-decoration:none;
+}
+
+.editionlabel{
+	color:#004000;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:10pt;	
+}
+
+.editionitem
+{
+	border-style:solid;
+	border-width:1;
+	background-color:white;
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:normal;
+	font-size:10pt;	
+}
+
+.editionitem_sb
+{
+	border-width:0;
+	background-color:white;
+	color:black;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:normal;
+	font-size:10pt;	
+}
+
+.orelhasel{
+	background-color:#004000;
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:11pt;	
+}
+
+.orelha{
+	background-color:#FFFFFF;
+	color:#004000;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:11pt;	
+}
+
+.title
+{
+	color:#00923D;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:30pt;	
+}
+
+.erro
+{
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:10pt;	
+}
+
+.textop
+{
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;	
+}
+
+.link
+{
+	color:#ffffff;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:10pt;
+}
+
+.login
+{
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:12pt;
+	font-weight:bold;
+}
+
+.error
+{
+	background:#808040;
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.order
+{
+	background:#808040;
+	color:#FFFFFF;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:11pt;
+	font-weight:bold;
+}
+
+.msg
+{
+	background:#808040;
+	color:white;
+	font-family:Tahoma, Helvetica, Arial;
+	font-size:10pt;
+	font-weight:bold;
+}
+
+.navigation
+{
+	color:#FFFFFF;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:9pt;	
+}
+
+.divBox
+{
+	margin:2px;
+}
+
+.label
+{
+	color:#00923D;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:9pt;
+}
+
+.texto
+{
+	color:#00923D;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:9pt;
+}
+
+.texto2
+{
+	color:#165389;
+}
+
+.texto3
+{
+	font-size:13pt;
+}
+
+.texto4
+{
+	padding-top:5px;
+}
+
+.texto5
+{
+	color:#F8C300;
+}
+
+.gfxDiv
+{
+	height:2px;
+}
+
+.gfxDiv1
+{
+	background-color:#E71B1E;
+}
+
+.gfxDiv2
+{
+	background-color:#165389;
+}
+
+.gfxDiv3
+{
+	color:#FFFFFF;
+	background-color:#F8C300;
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:8pt;
+}
+
+.textArea
+{
+	font-family:Tahoma, Helvetica, Arial;
+	font-weight:bold;
+	font-size:8pt;
+}
+
+.linha
+{
+	overflow-x:hidden;
+	clear:both;
+}
+
+.coluna
+{
+	float:left;
+}
+
+.coluna2
+{
+	width:80px;
+}
+
+.coluna3
+{
+	width:50%;
+}
+
+.coluna4
+{
+	display:inline;
+}
+
+</style>
+<title>LB_BENCHMARK V 1.0 Beta</title>
+<script type="text/javascript" src="./JS/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="./JS/General.js"></script>
+<script type="text/javascript" src="./JS/moment.min.js"></script>
+<script type="text/javascript" src="./JS/date.js"></script>
+</head>
+<body>
+<div class="linha">
+	<div class="linha coluna"><img src="./Images/LogoLightBRWeb.png" alt="BR Light LTDA"></div>
+</div>
+<div class="linha">
+	<div class="title coluna" style="margin-left:15px;">LB_BENCHMARK</div>
+	<div class="coluna texto texto4" style="margin-left:15px;">V 1.0 Beta</div>
+</div>
+<div class="linha">
+	<div class="coluna texto texto4" style="margin-left:15px;">©[mirrored] Copyright 2013 Eduardo Lúcio</div>
+</div>
+<div class="linha">
+	<div class="coluna texto texto4" style="margin-left:15px;">This program is distributed under the terms of the GNU/GPL General Public License</div>
+</div> 
+<div class="linha">
+	<div class="divBox coluna"><button id="buttonStartBenchmarking" type="button" onclick="Start_Benchmarking();">[START_BENCHMARKING!]</button></div>
+	<div class="divBox coluna"><button id="buttonStopBenchmarking" type="button" onclick="Stop_Benchmarking();">[STOP_BENCHMARKING!]</button></div>
+</div>
+<div class="divBox linha texto texto2">
+	(ms = milliseconds)
+</div>
+<div class="divBox linha texto texto2 texto3">
+	Test Parameters
+</div>
+<div class="linha">
+	<div class="divBox coluna coluna2 texto texto4">Server:</div><div class="divBox coluna"><input id="fieldServer" class=editionitem type="Text" size="20" value=""/></div>
+	<!--<div class="divBox coluna coluna2 texto texto4">Server:</div><div class="divBox coluna"><input id="fieldServer" class=editionitem type="Text" size="20" value="localhost"/></div>-->
+</div>
+<div class="linha">
+	<div class="divBox coluna coluna2 texto texto4">UDB:</div><div class="divBox coluna"><input id="fieldUDB" class=editionitem type="Text" size="20" value=""/></div>
+	<!--<div class="divBox coluna coluna2 texto texto4">UDB:</div><div class="divBox coluna"><input id="fieldUDB" class=editionitem type="Text" size="20" value="defudb"/></div>-->
+</div>
+<div class="linha">
+	<div class="divBox coluna coluna2 texto texto4">Base:</div><div class="divBox coluna"><input id="fieldBase" class=editionitem type="Text" size="20" value=""/></div>
+	<!--<div class="divBox coluna coluna2 texto texto4">Base:</div><div class="divBox coluna"><input id="fieldBase" class=editionitem type="Text" size="20" value="docs_recebidos"/></div>-->
+</div>
+<div class="linha">
+	<div class="divBox coluna coluna2 texto texto4">User:</div><div class="divBox coluna"><input id="fieldUser" class=editionitem type="Text" size="20" value=""/></div>
+	<!--<div class="divBox coluna coluna2 texto texto4">User:</div><div class="divBox coluna"><input id="fieldUser" class=editionitem type="Text" size="20" value="lbw"/></div>-->
+</div>
+<div class="linha">
+	<div class="divBox coluna coluna2 texto texto4">Password:</div><div class="divBox coluna"><input id="fieldPassword" class=editionitem type="password" size="20" value=""/></div>
+	<!--<div class="divBox coluna coluna2 texto texto4">Password:</div><div class="divBox coluna"><input id="fieldPassword" class=editionitem type="password" size="20" value="lbw"/></div>-->
+</div>
+<div class="linha">
+	<div class="divBox coluna coluna2 texto texto4">Cycle Time: *</div><div class="divBox coluna"><input id="fieldCycleTime" class=editionitem type="Text" size="10" value=""/></div>
+	<!--<div class="divBox coluna coluna2 texto texto4">Cycle Time: *</div><div class="divBox coluna"><input id="fieldCycleTime" class=editionitem type="Text" size="10" value="1000"/></div>-->
+</div>
+<div class="linha">
+	<div class="divBox coluna coluna2 texto texto4">Query Test:</div><div class="divBox coluna"><input id="fieldQueryTest" class=editionitem type="Text" size="150" value=""/></div>
+	<!--<div class="divBox coluna coluna2 texto texto4">Query Test:</div><div class="divBox coluna"><input id="fieldQueryTest" class=editionitem type="Text" size="150" value="silva"/></div>-->
+</div>
+<div class="divBox linha texto texto4">
+	* In milliseconds.
+</div>
+<div class="divBox linha texto texto2 texto3">
+	General Information
+</div>
+<div class="linha">
+	<div class="divBox coluna texto">
+	Time/Date That Started:
+	</div>
+	<div class="divBox coluna texto texto2" id="timeDateThatStarted">
+	0
+	</div>
+</div>
+<div class="linha">
+	<div class="divBox coluna texto" >
+	Time/Date Terminated:
+	</div>
+	<div class="divBox coluna texto texto2" id="timeDateThatTerminated">
+	0
+	</div>
+</div>
+<div class="linha">
+	<div class="divBox coluna texto" >
+	Elapsed Time/Date:
+	</div>
+	<div class="divBox coluna texto texto2" id="timeDateElapsed">
+	0
+	</div>
+</div>
+<div class="linha">
+	<div class="coluna coluna3">
+		<div class="divBox linha texto texto2 texto3">
+			LightBase Latency
+		</div>
+		<div class="linha">
+			<div class="divBox coluna texto" >
+			Time Average:
+			</div>
+			<div class="divBox coluna texto texto2" id="timeAverageNowLB">
+			0
+			</div>
+		</div>
+		<div class="linha">
+			<div class="divBox coluna texto" >
+			Maximum:
+			</div>
+			<div class="divBox coluna texto texto2" id="valueMaximumLB">
+			0
+			</div>
+		</div>
+		<div class="linha">
+			<div class="divBox coluna texto" >
+			Minimum:
+			</div>
+			<div class="divBox coluna texto texto2" id="valueMinimumLB">
+			0
+			</div>
+		</div>
+		<div class="linha" id="benchmarkOutPutDivLB">
+		</div>
+	</div>
+	<div class="coluna coluna3">
+		<div class="divBox linha texto texto2 texto3">
+			Network Latency
+		</div>
+		<div class="linha">
+			<div class="divBox coluna texto" >
+			Time Average:
+			</div>
+			<div class="divBox coluna texto texto2" id="timeAverageNowNT">
+			0
+			</div>
+		</div>
+		<div class="linha">
+			<div class="divBox coluna texto" >
+			Maximum:
+			</div>
+			<div class="divBox coluna texto texto2" id="valueMaximumNT">
+			0
+			</div>
+		</div>
+		<div class="linha">
+			<div class="divBox coluna texto" >
+			Minimum:
+			</div>
+			<div class="divBox coluna texto texto2" id="valueMinimumNT">
+			0
+			</div>
+		</div>
+		<div class="linha"  id="benchmarkOutPutDivNT">
+		</div>
+	</div>
+</div>
+</body>
+</html>
